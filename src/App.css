@@ -36,9 +36,8 @@
 .txt h4,
 .App h4 {
   background-color: honeydew;
-  /* padding: 5px; */
 }
-img {
+.profile img {
   width: 420px;
   margin: 15px;
   background-color: honeydew;
@@ -46,4 +45,8 @@ img {
 }
 .timer {
   margin: auto;
+  color: teal;
+}
+.timer:hover {
+  zoom: 120%;
 }
