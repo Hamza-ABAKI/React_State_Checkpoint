@@ -24,7 +24,7 @@ class App extends React.Component {
     })
 
   componentDidMount() {
-    this.timer = setInterval(() => this.tick(), 1000)
+    setInterval(this.tick, 1000)
   }
 
   time = () => {
@@ -40,6 +40,10 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
+        {/* Timer */}
+        <div className='timer'>
+          <h2>You've been here for {this.time()}</h2>
+        </div>
         {/* showHide Button */}
         <button onClick={this.showHide}>
           <h3>{this.state.shows ? 'Hide' : 'Show'} Profile</h3>
@@ -55,10 +59,6 @@ class App extends React.Component {
             </div>
           </div>
         ) : null}
-        {/* Timer */}
-        <div className='timer'>
-          <h2>You've been here for {this.time()}</h2>
-        </div>
       </div>
     )
   }
